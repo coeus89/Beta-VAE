@@ -46,7 +46,7 @@ if __name__ == "__main__":
     parser.add_argument('--beta1', default=0.9, type=float, help='Adam optimizer beta1')
     parser.add_argument('--beta2', default=0.999, type=float, help='Adam optimizer beta2')
 
-    parser.add_argument('--dset_dir', default='D:\\DeepLearning\\Beta-VAE\\data', type=str, help='dataset directory')
+    parser.add_argument('--dset_dir', default='data', type=str, help='dataset directory')
     parser.add_argument('--dataset', default='CelebA', type=str, help='dataset name')
     # parser.add_argument('--dataset', default='3dchairs', type=str, help='dataset name')
     parser.add_argument('--image_size', default=64, type=int, help='image size. now only (64,64) is supported')

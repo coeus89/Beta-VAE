@@ -7,6 +7,7 @@ import torch
 from torch.utils.data import Dataset, DataLoader
 from torchvision.datasets import ImageFolder
 from torchvision import transforms
+from torchvision import datasets as tvdset
 
 
 def is_power_of_2(num):
@@ -59,6 +60,9 @@ def return_data(args):
             transforms.Resize((image_size, image_size)),
             transforms.ToTensor(),])
         train_kwargs = {'root':root, 'transform':transform}
+        # dset = tvdset.CelebA(root=root, transform=transform, download=True)
+        # train_data = tvdset.CelebA(root=dset_dir, transform=transform, download=True, split='train')
+        # test_data = tvdset.CelebA(root=dset_dir, transform=transform, download=True, split='test')
         dset = CustomImageFolder
 
     elif name.lower() == 'dsprites':
